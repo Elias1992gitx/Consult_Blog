@@ -4,5 +4,10 @@
     "@typescript-eslint/no-explicit-any": "warn",
     "prefer-const": "warn",
     "react-hooks/exhaustive-deps": "warn"
-  }
+  },
+  "ignorePatterns": [
+    ".next",
+    "node_modules",
+    "public"
+  ]
 }
