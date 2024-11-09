@@ -4,6 +4,7 @@ import { Outfit } from 'next/font/google'
 import Footer from '@/components/footer'
 import Navbar from '@/components/navbar'
 import localFont from 'next/font/local'
+
 import './globals.css'
 
 // Load fonts outside component

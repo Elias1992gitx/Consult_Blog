@@ -1,6 +1,7 @@
 'use client'
 
 import dynamic from 'next/dynamic'
+
 import { Suspense } from 'react'
 
 // Dynamically import components with no SSR
@@ -41,9 +42,7 @@ export default function Page() {
         <LandingBlog />
          
         <PromoSection />
-       
-        
-      </Suspense>
+       </Suspense>
     </main>
   )
 }
