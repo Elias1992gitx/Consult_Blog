@@ -1,13 +1,13 @@
 {
   "builds": [
     {
-      "src": "next.config.ts",
+      "src": "next.config.js",
       "use": "@vercel/next"
     }
   ],
-  "build": {
-    "env": {
-      "NEXT_PUBLIC_SKIP_BUILD_ERRORS": "true"
-    }
+  "env": {
+    "NEXT_PUBLIC_SANITY_PROJECT_ID": "ipz2xjua",
+    "NEXT_PUBLIC_SANITY_DATASET": "blogconsult",
+    "NEXT_PUBLIC_SANITY_API_VERSION": "2024-03-01"
   }
 }
