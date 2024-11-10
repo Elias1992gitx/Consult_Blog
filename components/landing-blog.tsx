@@ -102,7 +102,7 @@ export default function LandingBlog() {
                 </h3>
                 <p className="text-gray-600 mb-4">{post.description}</p>
                 <Link 
-                  href={`/blog/${post.id}`}
+                  href="/blog"
                   className="flex items-center text-[#FF5722] font-medium group"
                 >
                   Read More

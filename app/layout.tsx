@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Outfit } from 'next/font/google'
+import dynamic from 'next/dynamic'
 
 import Footer from '@/components/footer'
 import Navbar from '@/components/navbar'

@@ -54,7 +54,7 @@ export default function HeroSection() {
               </p>
               <div className="flex flex-row items-center justify-start gap-3 sm:gap-4 pl-2 sm:pl-4">
                 <Link
-                  href="/consultation"
+                  href="/contact-us"
                   className="group relative flex-1 sm:flex-none px-4 sm:px-6 py-2.5 sm:py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl sm:rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 min-w-[140px] sm:min-w-[180px]"
                 >
                   <span className="relative z-10 flex items-center justify-center gap-1.5 sm:gap-2 text-[13px] xs:text-sm sm:text-base">

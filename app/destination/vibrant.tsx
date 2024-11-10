@@ -3,6 +3,22 @@
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 
+const waveVariants = {
+  initial: { scale: 0.8, opacity: 0.4 },
+  animate: {
+    scale: [0.8, 1.6],
+    opacity: [0.4, 0],
+  }
+}
+
+const overlayWaveVariants = {
+  initial: { scale: 0.6, opacity: 0.3 },
+  animate: {
+    scale: [0.6, 1.4],
+    opacity: [0.3, 0],
+  }
+}
+
 const WaveBackground = () => (
   <div className="absolute inset-0 overflow-hidden">
     {[1, 2, 3, 4, 5, 6, 7, 8].map((i) => (
@@ -14,11 +30,9 @@ const WaveBackground = () => (
           right: `${(i * -5)}%`,
           top: `${(i * 2)}%`
         }}
-        initial={{ scale: 0.8, opacity: 0.4 }}
-        animate={{
-          scale: [0.8, 1.6],
-          opacity: [0.4, 0],
-        }}
+        variants={waveVariants}
+        initial="initial"
+        animate="animate"
         transition={{
           repeat: Infinity,
           duration: 6,
@@ -28,7 +42,6 @@ const WaveBackground = () => (
         }}
       />
     ))}
-    {/* Additional overlay waves for depth */}
     {[1, 2, 3, 4].map((i) => (
       <motion.div
         key={`overlay-${i}`}
@@ -37,11 +50,9 @@ const WaveBackground = () => (
           right: `${(i * -8)}%`,
           bottom: `${(i * 5)}%`
         }}
-        initial={{ scale: 0.6, opacity: 0.3 }}
-        animate={{
-          scale: [0.6, 1.4],
-          opacity: [0.3, 0],
-        }}
+        variants={overlayWaveVariants}
+        initial="initial"
+        animate="animate"
         transition={{
           repeat: Infinity,
           duration: 8,
@@ -81,49 +92,28 @@ export default function VibrantContact() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            Your laboratory instruments should serve you, not the other way around. 
-            We're happy to help you.
+            Expert guidance for international education, test preparation, and
+            visa assistance. Transform your academic dreams into reality.
           </motion.p>
 
-          <div className="flex flex-col sm:flex-row gap-4">
-            <Link
-              href="/consultation"
-              className="group relative overflow-hidden rounded-full bg-black px-6 sm:px-8 py-3 sm:py-4 inline-flex items-center gap-3 w-full sm:w-auto justify-center"
+          <Link
+            href="/contact-us"
+            className="group relative overflow-hidden rounded-full bg-white px-6 sm:px-8 py-3 sm:py-4 inline-flex items-center gap-3 w-full sm:w-auto justify-center"
+          >
+            <motion.span
+              className="relative z-10 text-black font-medium"
+              whileHover={{ x: 5 }}
+              transition={{ duration: 0.3 }}
             >
-              <motion.span
-                className="relative z-10 text-white font-medium"
-                whileHover={{ x: 5 }}
-                transition={{ duration: 0.3 }}
-              >
-                Contact Us
-              </motion.span>
-              <motion.div
-                className="absolute right-4 w-4 h-4 bg-white rounded-full"
-                initial={{ scale: 0.8 }}
-                whileHover={{ scale: 1.2 }}
-                transition={{ duration: 0.3 }}
-              />
-            </Link>
-
-            <Link
-              href="/samples"
-              className="group relative overflow-hidden rounded-full bg-black px-6 sm:px-8 py-3 sm:py-4 inline-flex items-center gap-3 w-full sm:w-auto justify-center"
-            >
-              <motion.span
-                className="relative z-10 text-white font-medium"
-                whileHover={{ x: 5 }}
-                transition={{ duration: 0.3 }}
-              >
-                Explore More
-              </motion.span>
-              <motion.div
-                className="absolute right-4 w-4 h-4 bg-white rounded-full"
-                initial={{ scale: 0.8 }}
-                whileHover={{ scale: 1.2 }}
-                transition={{ duration: 0.3 }}
-              />
-            </Link>
-          </div>
+              Contact Us
+            </motion.span>
+            <motion.div
+              className="absolute right-4 w-4 h-4 bg-white rounded-full"
+              initial={{ scale: 0.8 }}
+              whileHover={{ scale: 1.2 }}
+              transition={{ duration: 0.3 }}
+            />
+          </Link>
         </motion.div>
       </div>
     </section>

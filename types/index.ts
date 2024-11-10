@@ -1,17 +1,11 @@
 export interface Post {
   _id: string
   title: string
-  slug: {
+  slug?: {
     current: string
   }
-  mainImage: {
-    _type: string
-    asset: {
-      _ref: string
-      _type: string
-    }
-  }
-  publishedAt: string
+  mainImage?: any
+  publishedAt?: string
   excerpt?: string
-  body: any
+  body?: any
 }

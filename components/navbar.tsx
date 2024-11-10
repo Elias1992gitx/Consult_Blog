@@ -164,7 +164,7 @@ export default function Navbar() {
     <>
       <NavLink href="/about-us">About Us</NavLink>
       <NavLink href="/services">Services</NavLink>
-       <NavLink href="/destination">Destination</NavLink>
+      <NavLink href="/destination">Destination</NavLink>
       {/* <DropdownNavItem
         trigger="Destination"
         items={[
@@ -245,7 +245,9 @@ export default function Navbar() {
               'group'
             )}
           >
-            <span className="relative z-10">CONTACT NOW</span>
+            <Link href="/contact-us">
+              <span className="relative z-10 bg-green">CONTACT NOW</span>
+            </Link>
           </Button>
           <motion.div
             className="absolute inset-0 -z-10 rounded-full opacity-0"

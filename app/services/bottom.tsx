@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import Image from 'next/image'
+import Link from 'next/link'
 
 export default function Bottom() {
   return (
@@ -46,7 +47,9 @@ export default function Bottom() {
                          font-medium shadow-lg hover:shadow-xl 
                          transition-all duration-300 group flex items-center gap-2"
               >
+                <Link href="/contact-us">
                 <span>Book Consultation</span>
+                </Link>
                 <svg
                   className="w-5 h-5 group-hover:translate-x-1 transition-transform"
                   fill="none"
@@ -91,8 +94,8 @@ export default function Bottom() {
               className="absolute bottom-8 left-8 right-8 bg-black/30 backdrop-blur-sm rounded-xl p-4 grid grid-cols-3 gap-4"
             >
               {[
-                { number: '10k+', label: 'Students' },
-                { number: '50+', label: 'Countries' },
+                { number: '15k+', label: 'Students' },
+                { number: '50+', label: 'Universities' },
                 { number: '100%', label: 'Success' },
               ].map((stat, index) => (
                 <div key={stat.label} className="text-center">

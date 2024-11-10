@@ -89,8 +89,8 @@ export default function ChatBot({ isOpen, onClose }: ChatBotProps) {
           exit={{ opacity: 0, y: 20 }}
           className={cn(
             'fixed z-50 bg-white shadow-2xl overflow-hidden border border-gray-200',
-            'sm:bottom-24 bottom-0 right-0 w-full h-[100dvh]',
-            'sm:w-[400px] sm:h-[480px] sm:right-4 sm:rounded-2xl'
+            'bottom-0 right-0 w-full h-[90dvh]',
+            'sm:bottom-24 sm:w-[400px] sm:h-[480px] sm:right-4 sm:rounded-2xl'
           )}
         >
           <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-4 text-white">

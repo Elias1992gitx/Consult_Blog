@@ -60,7 +60,10 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
       />
       <h1 className="text-4xl font-bold mb-4">{post.title}</h1>
       <div className="text-gray-600 mb-8">
-        {new Date(post.publishedAt).toLocaleDateString()}
+        {post.publishedAt 
+          ? new Date(post.publishedAt).toLocaleDateString()
+          : 'Date not available'
+        }
       </div>
       <div className="prose max-w-none">
         <PortableText value={post.body} />

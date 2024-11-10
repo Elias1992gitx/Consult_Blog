@@ -29,6 +29,11 @@ const PromoSection = dynamic(() => import('@/components/promo-section'), {
   ssr: false
 })
 
+const ScheduleCallCard = dynamic(
+  () => import('@/components/schedule').then(mod => mod.default),
+  { ssr: false }
+)
+
 
 export default function Page() {
   return (
@@ -38,11 +43,12 @@ export default function Page() {
         <CTA />
         <MarqueeDemo />
         <HeroSectionAlt />
-        
+
         <LandingBlog />
-         
+
         <PromoSection />
-       </Suspense>
+        <ScheduleCallCard />
+      </Suspense>
     </main>
   )
 }

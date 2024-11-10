@@ -184,7 +184,7 @@ export function MarqueeDemo() {
           educational opportunities.
         </p>
         <Link
-          href="/universities"
+          href="/destination"
           className="inline-block px-6 py-3 bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 text-white rounded-full font-medium transition-colors"
         >
           See All Universities

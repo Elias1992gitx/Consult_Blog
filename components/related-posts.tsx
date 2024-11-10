@@ -9,11 +9,18 @@ interface RelatedPostsProps {
 }
 
 export default function RelatedPosts({ posts }: RelatedPostsProps) {
+  // Filter out posts without slugs
+  const validPosts = posts.filter((post): post is Post & { slug: { current: string } } => 
+    post?.slug?.current !== undefined
+  )
+
+  if (validPosts.length === 0) return null
+
   return (
     <div className="mt-16">
       <h2 className="text-2xl font-bold mb-8">Related Posts</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        {posts.map((post, index) => (
+        {validPosts.map((post, index) => (
           <motion.div
             key={post._id}
             initial={{ opacity: 0, y: 20 }}
@@ -34,7 +41,7 @@ export default function RelatedPosts({ posts }: RelatedPostsProps) {
                   {post.title}
                 </h3>
                 <p className="text-sm text-gray-600">
-                  {new Date(post.publishedAt).toLocaleDateString()}
+                  {post.publishedAt ? new Date(post.publishedAt).toLocaleDateString() : ''}
                 </p>
               </div>
             </Link>

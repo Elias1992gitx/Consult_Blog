@@ -82,7 +82,7 @@ export default function PromoSection() {
               and consultation services.
             </p>
             <Link
-              href="/consultation"
+              href="/contact-us"
               className="inline-block px-6 py-3 bg-blue-600/80 backdrop-blur-sm text-white rounded-full hover:bg-blue-700/90 transition-all duration-300 shadow-lg hover:shadow-xl"
             >
               Get Special Consultation

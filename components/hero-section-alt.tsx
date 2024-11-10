@@ -152,7 +152,7 @@ export default function HeroSection() {
                  Check Eligibility!
                </Link> */}
               <Link
-                href="/book-counselling"
+                href="/contact-us"
                 className="inline-flex items-center px-8 py-3.5 rounded-full bg-[#00A6E6] hover:bg-[#0095CF] text-white font-medium transition-all duration-200 shadow-lg shadow-blue-200/50 hover:shadow-xl hover:shadow-blue-300/50"
               >
                 Book counselling session!
