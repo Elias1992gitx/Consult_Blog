@@ -1,0 +1,13 @@
+{
+  "builds": [
+    {
+      "src": "next.config.ts",
+      "use": "@vercel/next"
+    }
+  ],
+  "build": {
+    "env": {
+      "NEXT_PUBLIC_SKIP_BUILD_ERRORS": "true"
+    }
+  }
+}
