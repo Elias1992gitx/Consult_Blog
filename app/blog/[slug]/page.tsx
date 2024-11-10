@@ -1,12 +1,12 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import RelatedPosts from '@/components/related-posts'
 import { client, urlFor } from '@/lib/sanity'
-import { PortableText } from '@portabletext/react'
 import { Post } from '@/types'
+import { PortableText } from '@portabletext/react'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
-import RelatedPosts from '@/components/related-posts'
+import { useEffect, useState } from 'react'
 
 interface PostData {
   post: Post
@@ -32,7 +32,7 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
           }
         }
       }`
-      
+
       const result = await client.fetch(query, { slug: params.slug })
       setPostData(result)
     }
@@ -45,7 +45,7 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
   const { post, relatedPosts } = postData
 
   return (
-    <motion.main 
+    <motion.main
       className="min-h-screen pt-32 max-w-4xl mx-auto px-4"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
@@ -65,7 +65,7 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
       <div className="prose max-w-none">
         <PortableText value={post.body} />
       </div>
-      
+
       {relatedPosts.length > 0 && <RelatedPosts posts={relatedPosts} />}
     </motion.main>
   )
