@@ -57,7 +57,7 @@ export default function AboutDibora() {
 
               <div className="flex flex-wrap gap-4 pt-4">
                 <Link
-                  href="/try-out"
+                  href="/contact-us"
                   className="inline-flex items-center px-8 py-3.5 rounded-full bg-black text-white font-medium transition-all duration-200 hover:bg-gray-800"
                 >
                   Try Out
@@ -85,10 +85,10 @@ export default function AboutDibora() {
                 </Link>
 
                 <Link
-                  href="/learn-more"
+                  href="/contact-us"
                   className="inline-flex items-center px-8 py-3.5 rounded-full bg-gray-100 text-gray-800 font-medium hover:bg-gray-200 transition-all duration-200"
                 >
-                  Learn More
+                  Get More
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-5 w-5 ml-2"

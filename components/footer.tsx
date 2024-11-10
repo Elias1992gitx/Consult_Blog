@@ -8,10 +8,10 @@ import {
   FaInstagram, 
   FaLinkedinIn, 
   FaTelegram,
-  FaTiktok,
   FaPhone,
-  FaEnvelope 
-} from 'react-icons/fa'
+  FaEnvelope,
+  FaXTwitter 
+} from 'react-icons/fa6'
 
 export default function Footer() {
   return (
@@ -82,11 +82,12 @@ export default function Footer() {
             {/* Social Media Icons */}
             <div className="flex justify-center gap-6 sm:mr-32">
               {[
-                { icon: FaFacebookF, href: '#' },
-                { icon: FaInstagram, href: '#' },
-                { icon: FaLinkedinIn, href: '#' },
-                { icon: FaTelegram, href: '#' },
-                { icon: FaTiktok, href: '#' },
+    
+                { icon: FaInstagram, href: 'https://www.instagram.com/dawitdessie_' },
+                { icon: FaLinkedinIn, href: 'https://www.linkedin.com/in/dawit-dessie-a09559190/' },
+                { icon: FaTelegram, href: 'https://t.me/Dawitdessie' },
+                { icon: FaXTwitter, href: 'https://x.com/DawitDessie_' },
+                 { icon: FaFacebookF, href: '#' },
               ].map((social, index) => (
                 <motion.a
                   key={index}
